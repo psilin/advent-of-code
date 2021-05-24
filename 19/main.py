@@ -13,6 +13,7 @@ to next such rule but it is more then enough given above 3 facts.
 import re
 import enum
 
+
 class RuleType(enum.Enum):
     LongChoice = 0
     ShortChoice = 1
@@ -96,6 +97,7 @@ def type_a_match(d, rules):
         return False
     return all([naive_match(d[0:8], 42, rules), naive_match(d[8:16], 42, rules), naive_match(d[16:24], 31, rules)])
 
+
 def type_b_match(d, rules):
     blocks = len(d)//8
     for b42 in range(blocks//2 + 1, blocks):
@@ -124,4 +126,5 @@ if __name__ == '__main__':
             cnt_b = cnt_b + 1
 
         print(res_a, res_b, d)
+
     print(cnt_a, cnt_b)
