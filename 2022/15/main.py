@@ -54,8 +54,8 @@ def find_point(pairs, r):
 def main():
     pairs = parse()
     find_row(pairs, 2000000)
-
     find_point(pairs, 4000000)
+
 
 if __name__ == "__main__":
     main()
