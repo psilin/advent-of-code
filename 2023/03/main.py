@@ -112,8 +112,6 @@ def look_around_star(matrix, x, y):
                 i += 1
             if len(n) > 0:
                 res.append(int(n))
-
-
     return res
 
 
